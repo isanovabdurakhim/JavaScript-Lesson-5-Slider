@@ -1,0 +1,34 @@
+1. slidePosition sozdat qilamiz let yordamida qiymati 0
+
+2. slides nomli o'zgaruvchi sozdat qilamiz const yordamida va carousel__item nomli hamma klasslani chaqiramiz getElementsByClassName bilan
+getElementsByClassName bu carousel__item nomli hamma divlani chaqirvoladi va bu massiv ga aylanadi lekin oddiy javascript massivi emas shu uchun for of loop dan foydalanamiz
+
+3. totalSlides nomli o'zgaruvchi sozdat qilamiz const yordamida qiymatiga slides ni length ni beramiz
+
+4. carousel__button--prev id ni chaqiramiz prev nomli o'zgaruvchiga beramiz
+const yordamida
+
+5. carousel__button--next id ni chaqiramiz next nomli o'zgaruvchiga beramiz
+const yordamida
+
+6. next o'zgaruvchiga addEventListener beramiz ichiga funktsiya chaqiramiz moveToNextSlide digan
+
+7. prev o'zgaruvchiga addEventListener beramiz ichiga funktsiya chaqiramiz moveToPrevSlide digan
+
+8. moveToNextSlide() digan funktsiya yasimiz ichiga if() bilan shart yozamiz
+agar slidePosition aniq teng bo'sa totalSlides ohirgi uzunligiga slidePosition qiymatini 0 qilamiz
+aks holda slidePosition inkriment qilamiz
+
+9. moveToPrevSlide() digan funktsiya yasimiz ichiga if() bilan shart yozamiz
+agar slidePosition aniq teng bo'sa 0 ga 
+slidePosition = totalSlides oxirgi uzunligini qiymat qilib beramiz
+aks holda slidePosition dikriment qilamiz
+
+10. updateSlidePosition() digan funktsiya yasimiz ichiga for of loop yozamiz
+for ichida let ochamiz nomini slide dib yozamiz qiymatiga slides o'zgaruvchini beramiz
+slides bu har 1ta rasimi o'rab turgan div biza tepada bu slides ni yozganmiz
+endi active klass ni o'chrishimiz kere va nonActive klass qo'shishimiz kere
+for of loop dan chiqib slides massivini ichiga slidePosition ni beramiz va classList add yordamida active klass ni berib qoyamiz 
+eslatma: slidePosition eng birinchida yozganmiz tepada va qiymati 0 ga teng shunda 1 chi rasimda har doim active klass bor bob turadi
+
+11. endi qiladigan ishimiz updateSlidePosition() funktsiyasini moveToPrevSlide() va moveToNextSlide() funktsiyalarini ichiga joylashimiz kere faqat if() shartlaridan keyin
